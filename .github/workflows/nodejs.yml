@@ -1,0 +1,32 @@
+name: GitHub Node CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install -g yarn
+    - name: yarn install, build, and test
+      run: |
+        yarn install
+        yarn test
+      env:
+        CI: true
+        PORT: 3000
+        DATABASE_HOST: localhost
+        DATABASE_USERNAME: root
+        DATABASE_PASSWORD: docker
+        DATABASE_PORT: 5432
+
