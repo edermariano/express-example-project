@@ -1,6 +1,6 @@
 # Express, Jest, Supertest, ES6, GitHub Actions
 
-![](https://github.com/edermariano/express-example-project/workflows/pr-tests/badge.svg)
+![](https://github.com/edermariano/express-example-project/workflows/pr-tests/badge.svg?branch=master)
 
 Just for study.
 
