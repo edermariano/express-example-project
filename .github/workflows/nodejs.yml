@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [10.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -24,3 +24,9 @@ jobs:
         yarn test
       env:
         CI: true
+        PORT: 3000
+        DATABASE_HOST: localhost
+        DATABASE_USERNAME: root
+        DATABASE_PASSWORD: docker
+        DATABASE_PORT: 5432
+
