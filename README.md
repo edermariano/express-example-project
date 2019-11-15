@@ -6,17 +6,12 @@ Just for study.
 
 ## Instructions
 
-. Clone this repository
-
-. Setup the .env file by copying the .env.sample
-
-. `npm install -g yarn` - to use yarn
-
-. `yarn install` - to install the dependencies
-
-. `yarn test` - to run the tests
-
-. `yarn dev` - to run the application (with nodemon)
+* Clone this repository
+* Setup the .env file by copying the .env.sample
+* `npm install -g yarn` - to use yarn
+* `yarn install` - to install the dependencies
+* `yarn test` - to run the tests
+* `yarn dev` - to run the application __(with nodemon)__
 
 
 ## ToDo
