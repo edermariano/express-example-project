@@ -21,7 +21,7 @@ jobs:
     - name: yarn install, build, and test
       run: |
         yarn install
-        yarn run test
+        yarn test
       env:
         CI: true
         PORT: 3000
