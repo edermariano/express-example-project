@@ -1,8 +1,9 @@
 import Sequelize from 'sequelize';
 
 import databaseConfig from '../config/database';
+import Todo from '../app/models/todo';
 
-const models = [];
+const models = [Todo];
 
 class Database {
   constructor() {
