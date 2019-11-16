@@ -27,25 +27,6 @@ describe('Test ToDo Write APIs', () => {
     done();
   });
 
-  it('Should failed if the ToDo title is empty', async done => {
-    // act
-    const response = await request.post('/todos').send({ title: ' ' });
-
-    // assert
-    expect(response.status).toBe(400);
-    done();
-  });
-
-  it('Should failed on complete if the ToDo does not exists', async done => {
-    // act
-    const response = await request.patch(`/todos/1234`);
-
-    // assert
-    expect(response.status).toBe(404);
-    expect(response.body.error).toBe('ToDo not found!');
-    done();
-  });
-
   it('Should complete a ToDo', async done => {
     // arrange
     const toDoToBeCompleted = await todoFactory();
@@ -58,6 +39,25 @@ describe('Test ToDo Write APIs', () => {
 
     expect(response.status).toBe(200);
     expect(todo[0].closed_at).not.toBeNull();
+    done();
+  });
+
+  it('Should fail if the ToDo title is empty', async done => {
+    // act
+    const response = await request.post('/todos').send({ title: ' ' });
+
+    // assert
+    expect(response.status).toBe(400);
+    done();
+  });
+
+  it('Should fail to complete if the ToDo does not exists', async done => {
+    // act
+    const response = await request.patch(`/todos/1234`);
+
+    // assert
+    expect(response.status).toBe(404);
+    expect(response.body.error).toBe('ToDo not found!');
     done();
   });
 });
