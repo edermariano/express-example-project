@@ -1,0 +1,133 @@
+_type: export
+__export_format: 4
+__export_date: 2019-11-16T03:16:16.415Z
+__export_source: insomnia.desktop.app:v7.0.3
+resources:
+  - _id: req_0d7fe37a68ab423d84abc025a2f175c1
+    authentication: {}
+    body: {}
+    created: 1573873955477
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1573873955477
+    method: GET
+    modified: 1573874015026
+    name: Todo List
+    parameters: []
+    parentId: fld_1ccac895110045fbaba978f2ed80c8de
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3000/todos
+    _type: request
+  - _id: fld_1ccac895110045fbaba978f2ed80c8de
+    created: 1573873949028
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1573873949028
+    modified: 1573873949028
+    name: Local
+    parentId: wrk_75760ecef63c418f85e202b7bf5e5561
+    _type: request_group
+  - _id: wrk_75760ecef63c418f85e202b7bf5e5561
+    created: 1573873942011
+    description: ""
+    modified: 1573873942011
+    name: ToDo - Sample
+    parentId: null
+    _type: workspace
+  - _id: req_acade9f9d27b4efba91a2fd4a345a3dd
+    authentication: {}
+    body: {}
+    created: 1573874019501
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1573547264277
+    method: GET
+    modified: 1573874104315
+    name: Todo Closed List
+    parameters: []
+    parentId: fld_1ccac895110045fbaba978f2ed80c8de
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3000/completed-todos
+    _type: request
+  - _id: req_97b3624062c149c2b7b9ecc9547dbf90
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Massa"
+        }
+    created: 1573874029777
+    description: ""
+    headers:
+      - id: pair_a06ba129b8294f66858e82f4b680cbc3
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1573383918677
+    method: POST
+    modified: 1573874053034
+    name: New Todo
+    parameters: []
+    parentId: fld_1ccac895110045fbaba978f2ed80c8de
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3000/todos
+    _type: request
+  - _id: req_5a8122f139844da18d16b0cbab2d35da
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: ""
+    created: 1573874064975
+    description: ""
+    headers:
+      - id: pair_a06ba129b8294f66858e82f4b680cbc3
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1573302245877
+    method: PATCH
+    modified: 1573874083460
+    name: Finish Todo
+    parameters: []
+    parentId: fld_1ccac895110045fbaba978f2ed80c8de
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3000/todos/1
+    _type: request
+  - _id: env_a106f271a6150ecf20f86ca45637b4fb001614f6
+    color: null
+    created: 1573873942072
+    data: {}
+    dataPropertyOrder: null
+    isPrivate: false
+    metaSortKey: 1573873942072
+    modified: 1573873942072
+    name: Base Environment
+    parentId: wrk_75760ecef63c418f85e202b7bf5e5561
+    _type: environment
+  - _id: jar_a106f271a6150ecf20f86ca45637b4fb001614f6
+    cookies: []
+    created: 1573873942075
+    modified: 1573873942075
+    name: Default Jar
+    parentId: wrk_75760ecef63c418f85e202b7bf5e5561
+    _type: cookie_jar
