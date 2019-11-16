@@ -7,9 +7,7 @@ class Todo extends Model {
         title: Sequelize.STRING,
         closed_at: Sequelize.DATE
       },
-      {
-        sequelize
-      }
+      { sequelize }
     );
 
     return this;

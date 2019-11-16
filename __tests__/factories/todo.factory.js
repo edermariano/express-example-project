@@ -1,5 +1,5 @@
 import faker from 'faker';
-import Todo from '../../src/app/models/todo';
+import Todo from '../../src/app/models/Todo';
 
 const data = async (props = {}) => {
   const defaultProps = {
