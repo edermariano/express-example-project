@@ -2,7 +2,7 @@ import supertest from 'supertest';
 import server from '../src/app';
 import truncate from './util/truncate';
 import todoFactory from './factories/todo.factory';
-import Todo from '../src/app/models/todo';
+import Todo from '../src/app/models/Todo';
 
 const request = supertest(server);
 

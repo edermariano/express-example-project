@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize';
 
 import databaseConfig from '../config/database';
-import Todo from '../app/models/todo';
+import Todo from '../app/models/Todo';
 
 const models = [Todo];
 

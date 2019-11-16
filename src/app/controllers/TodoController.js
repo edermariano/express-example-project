@@ -1,6 +1,6 @@
 import { Op } from 'sequelize';
 import * as Yup from 'yup';
-import Todo from '../models/todo';
+import Todo from '../models/Todo';
 
 class TodoController {
   async list(req, res) {

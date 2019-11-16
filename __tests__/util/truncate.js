@@ -1,5 +1,5 @@
 import map from 'lodash/map';
-import Todo from '../../src/app/models/todo';
+import Todo from '../../src/app/models/Todo';
 
 const modelsToTruncate = [Todo];
 
