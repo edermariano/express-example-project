@@ -5,9 +5,10 @@ import todoFactory from './factories/todo.factory';
 
 const request = supertest(server);
 
-describe('Test ToDo APIs', () => {
-  beforeEach(async () => {
+describe('Test ToDo read APIs', () => {
+  beforeEach(async done => {
     await truncate();
+    done();
   });
 
   it('Should succeed if there is no item', async done => {
@@ -59,17 +60,5 @@ describe('Test ToDo APIs', () => {
     expect(response.status).toBe(200);
     expect(response.body.length).toBe(2);
     done();
-  });
-
-  it('Should create a ToDo', () => {
-    expect(1).toBe(1);
-  });
-
-  it('Should update a ToDo', () => {
-    expect(1).toBe(1);
-  });
-
-  it('Should complete a ToDo', () => {
-    expect(1).toBe(1);
   });
 });
