@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  lab-api:
+    container_name: lab-api
+    build: .
+    command: yarn dev
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/devlab
+    environment:
+      DATABASE_HOST: devlab-database
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_NAME: ${DATABASE_NAME}
+    depends_on:
+      - devlab-database
+
+  devlab-database:
+    image: postgres
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
