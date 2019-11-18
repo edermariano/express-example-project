@@ -5,13 +5,15 @@
   "author": "Eder Mariano <edermariano@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "predev": "yarn sequelize db:migrate",
     "dev": "nodemon src/server.js",
-    "start": "node src/server.js",
+    "start": "node -r sucrase/register src/server.js",
     "preci:test": "NODE_ENV=test yarn sequelize db:migrate",
     "pretest": "NODE_ENV=test yarn sequelize db:migrate",
     "ci:test": "NODE_ENV=test jest --runInBand",
     "test": "NODE_ENV=test jest --runInBand",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "docker": "docker exec -it lab-api sh"
   },
   "devDependencies": {
     "@sucrase/jest-plugin": "^2.0.0",
