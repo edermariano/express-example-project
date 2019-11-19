@@ -7,6 +7,7 @@
   "scripts": {
     "predev": "yarn sequelize db:migrate",
     "dev": "nodemon src/server.js",
+    "prestart": "yarn sequelize db:migrate",
     "start": "node -r sucrase/register src/server.js",
     "preci:test": "NODE_ENV=test yarn sequelize db:migrate",
     "pretest": "NODE_ENV=test yarn sequelize db:migrate",
