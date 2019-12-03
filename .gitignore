@@ -3,3 +3,4 @@ node_modules/
 .vscode/
 yarn-error.log
 __tests__/test.database.sqlite
+build/
